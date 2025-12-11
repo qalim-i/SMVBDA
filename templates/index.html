@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sir. M.V. Layout | 4th Block</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+  <div class="background-overlay"></div>
+  <header>
+    <div class="header-content">
+      <div class="logo">WE ARE <strong>SIR. M.V. LAYOUT (4th Block)</strong></div>
+      <div class="nav-right">
+        <span class="lang-label">Language</span>
+        <button id="langToggle" class="lang-btn">Kannada</button>
+      </div>
+        <nav>
+          <a href="#about">About</a>
+          <a href="#location">Location</a>
+          <a href="#hospitals">Hospitals</a>
+          <a href="#contact">Contact</a>
+          <a href="{% url 'register' %}">Register</a>
+        </nav>
+    </div>
+  </header>
+
+  <main>
+    <h1 class="background-title">VISHWESH<br/>WARAIAH</h1>
+
+    <section id="about" class="content-section">
+      <div class="info-text">
+        <h2>INFO</h2>
+        <h3>Welcome to our vibrant community.</h3>
+        <p>
+          Nestled in a serene corner of the city, Sir. M Vishweshwaraiah Layout is more than just a place to live—it's a community built on connection and shared values. Our neighborhood thrives on a spirit of collaboration, friendship, and mutual respect. This space is dedicated to keeping our residents informed and engaged with everything happening in our wonderful layout.
+        </p>
+      </div>
+      <div class="image-container-circular">
+        <img src="/media/image.png" alt="Entrance gate to Sir M Vishweshwaraiah Layout 4th Block with landscaped gardens and welcoming signage, showcasing the community's clean and well-maintained environment">
+
+      </div>
+    </section>
+    
+    <section id="gallery" class="content-section">
+      <h2>COMMUNITY GALLERY</h2>
+      <div class="gallery-grid">
+        <figure>
+          <img src="/media/garden.jpeg" alt="Community park during the day">
+          <figcaption>Morning Walks</figcaption>
+        </figure>
+        <figure>
+          <img src="/media/meet.jpeg" alt="Dog looking at you O_o">
+          <figcaption>Clean & Green</figcaption>
+        </figure>
+        <figure>
+          <img src="/media/excercise.jpeg" alt="Well-maintained road in the layout">
+          <figcaption>Evening Playtime</figcaption>
+        </figure>
+        <figure>
+          <img src="/media/meetf.jpeg" alt="Decorative lights during a festival">
+          <figcaption>Festival Nights</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="location" class="content-section map-section">
+      <h2>LOCATION MAP</h2>
+    <div class="Area map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12718.388300916202!2d77.46329168276827!3d12.94466964788891!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3eb471a4db47%3A0x9f8361f64b471c1b!2sSir%20M%20Vishweshwaraiah%20Layout%204th%20Block%2C%20SMV%20Layout%2C%20Bengaluru%2C%20Karnataka!5e1!3m2!1sen!2sin!4v1765266645900!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    </section>
+
+    <section id="hospitals" class="content-section hospitals-section">
+      <h2>NEARBY HOSPITALS & CLINICS</h2>
+      <p>Here are some hospitals and clinics around Sir M Vishweshwaraiah Layout:</p>
+      <div class="hospitals-grid">
+        <div class="hospital-card">
+          <h3>SSR Multi Speciality Hospital</h3>
+          <p><strong>Address:</strong> 2111 Kenchanapura Rd, Dodda Basti / Sonnenahalli / Kengeri Satellite Town</p>
+          <p><strong>Distance:</strong> ~0.1–1.5 km from 4th Block SMV Layout</p>
+          <p><strong>Phone:</strong><a href="tel:+91 94836 09529">+91 94836 09529</a></p>
+        </div>
+        <div class="hospital-card">
+          <h3>Vinayaka Clinic</h3>
+          <p><strong>Address:</strong> Dodda Basti / 4th Block, SMV Layout / Vishweshwaraiah Layout</p>
+          <p><strong>Distance:</strong> ~0.2 km away</p>
+          <p><strong>Phone:</strong><a href="tel:099455 86098">099455 86098</a></p>
+        </div>
+        <div class="hospital-card">
+          <h3>Shri Balaji Medical & General Store</h3>
+          <p><strong>Address:</strong> Maruthi Nagar / Sonnenahalli</p>
+          <p><strong>Distance:</strong> ~0.6 km from SMV Layout 4th Block</p>
+          <p><strong>Phone:</strong><a href="tel:091649 43913">091649 43913</a></p>
+        </div>
+        <div class="hospital-card">
+          <h3>Vijaya Hospital</h3>
+          <p><strong>Address:</strong> No. 2184, 3rd Block, Vishweshwaraiah Layout (near "Amma Ashrama" / Sonnenahalli Bridge)</p>
+          <p><strong>Distance:</strong> ~1.8 km from 4th Block</p>
+          <p><strong>Phone:</strong> <a href="tel:+91 94483 08729">+91 94483 08729</a></p>
+        </div>
+        <div class="hospital-card">
+          <h3>Adarsh Multi Speciality Hospital</h3>
+          <p><strong>Address:</strong> Stage II, Kengeri Satellite Town</p>
+          <p><strong>Distance:</strong> ~1.8–2.0 km from SMV Layout</p>
+          <p><strong>Phone:</strong> <a href="tel:073537 68545">073537 68545</a></p>
+        </div>
+        <div class="hospital-card">
+          <h3>Shreya Hospital</h3>
+          <p><strong>Address:</strong> Kengeri Satellite Town</p>
+          <p><strong>Distance:</strong> ~1.6–2.0 km from SMV Layout</p>
+          <p><strong>Phone:</strong> <a href="tel:080 2848 2958">080 2848 2958</a></p>
+        </div>
+        <div class="hospital-card">
+          <h3>Dermacare Skin Clinic</h3>
+          <p><strong>Address:</strong> 941/1, 1st Main Rd, Stage I, Kengeri Satellite Town</p>
+          <p><strong>Distance:</strong> ~1.6 km from SMV Layout</p>
+          <p><strong>Phone:</strong><a href="tel:073494 65404">073494 65404</a></p>
+        </div>
+      </div>
+    </section>
+
+
+    
+    <section id="contact" class="content-section contact-section">
+      <h2>CONTACT US</h2>
+      <p>For inquiries, suggestions, or to get involved with the Resident's Welfare Association, please reach out.</p>
+      <div class="contact-details">
+        <div class="contact-block">
+          <h3>Management</h3>
+          <p>hello.smvlayout@email.com</p>
+        </div>
+        <div class="contact-block">
+          <h3>Association Office</h3>
+          <p>#123, Community Hall,<br>4th Block, SMV Layout</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <p>&copy; 2025 Sir. M.V. Layout RWA. All rights reserved.</p>
+  </footer>
+
+  <script src="{% static 'script.js' %}"></script>
+</body>
+</html>

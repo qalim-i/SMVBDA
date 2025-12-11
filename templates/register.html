@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form | Sir. M.V. Layout</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <link rel="stylesheet" href="{% static 'register.css' %}">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">WE ARE <strong>SIR. M.V. LAYOUT (4th Block)</strong></div>
+            <nav>
+                <a href="{% url 'index' %}">Home</a>
+                <a href="{% url 'index_kannada' %}">Kannada</a>
+                <a href="{% url 'register' %}">Register</a>
+            </nav>
+        </div>
+    </header>
+    <main class="register-main">
+        <div class="content-section">
+            <h1 class="page-title">Registration Form</h1>
+            <p class="subtitle">Please fill in all the required details to register with our community</p>
+            
+            {% if success_message %}
+                <div class="success-message">{{ success_message }}</div>
+            {% endif %}
+            
+            <form method="post" class="registration-form">
+                {% csrf_token %}
+                
+                <div class="form-group">
+                    <label for="{{ form.name.id_for_label }}">{{ form.name.label }} <span class="required">*</span></label>
+                    {{ form.name }}
+                    {% if form.name.errors %}
+                        <div class="error-message">{{ form.name.errors.0 }}</div>
+                    {% endif %}
+                </div>
+
+                <div class="form-group">
+                    <label for="{{ form.guardian_name.id_for_label }}">{{ form.guardian_name.label }} <span class="required">*</span></label>
+                    {{ form.guardian_name }}
+                    {% if form.guardian_name.errors %}
+                        <div class="error-message">{{ form.guardian_name.errors.0 }}</div>
+                    {% endif %}
+                </div>
+
+                <div class="age-dob-group">
+                    <div class="form-group">
+                        <label for="{{ form.date_of_birth.id_for_label }}">{{ form.date_of_birth.label }}</label>
+                        {{ form.date_of_birth }}
+                        {% if form.date_of_birth.errors %}
+                            <div class="error-message">{{ form.date_of_birth.errors.0 }}</div>
+                        {% endif %}
+                    </div>
+
+                    <div class="form-group">
+                        <label for="{{ form.age.id_for_label }}">{{ form.age.label }}</label>
+                        {{ form.age }}
+                        {% if form.age.errors %}
+                            <div class="error-message">{{ form.age.errors.0 }}</div>
+                        {% endif %}
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="{{ form.profession.id_for_label }}">{{ form.profession.label }} <span class="required">*</span></label>
+                    {{ form.profession }}
+                    {% if form.profession.errors %}
+                        <div class="error-message">{{ form.profession.errors.0 }}</div>
+                    {% endif %}
+                </div>
+
+                <div class="form-group">
+                    <label for="{{ form.address.id_for_label }}">{{ form.address.label }} <span class="required">*</span></label>
+                    {{ form.address }}
+                    {% if form.address.errors %}
+                        <div class="error-message">{{ form.address.errors.0 }}</div>
+                    {% endif %}
+                </div>
+
+                <div class="form-group">
+                    <label for="{{ form.mobile_no.id_for_label }}">{{ form.mobile_no.label }} <span class="required">*</span></label>
+                    {{ form.mobile_no }}
+                    {% if form.mobile_no.errors %}
+                        <div class="error-message">{{ form.mobile_no.errors.0 }}</div>
+                    {% endif %}
+                </div>
+
+                <div class="form-group">
+                    <label for="{{ form.email.id_for_label }}">{{ form.email.label }} <span class="required">*</span></label>
+                    {{ form.email }}
+                    {% if form.email.errors %}
+                        <div class="error-message">{{ form.email.errors.0 }}</div>
+                    {% endif %}
+                </div>
+
+                {% if form.non_field_errors %}
+                    <div class="error-message">{{ form.non_field_errors.0 }}</div>
+                {% endif %}
+                
+                <div class="payment-info-section">
+                    <h3>Registration Fee Information</h3>
+                    <p class="payment-amount">Registration Fee: <strong>₹3,000/-</strong></p>
+                    <div class="payment-details">
+                        <h4>Payment Details:</h4>
+                        <ul>
+                            <li><strong>Account Name:</strong> Sir. M.V. Layout RWA</li>
+                            <li><strong>Account Number:</strong> XXXX XXXX XXXX</li>
+                            <li><strong>IFSC Code:</strong> XXXXXX</li>
+                            <li><strong>Bank Name:</strong> [Bank Name]</li>
+                        </ul>
+                        <p class="payment-note">
+                            <strong>Note:</strong> Please send the Transaction ID/UTR Number via WhatsApp to 
+                            our mobile number after making the payment when submitting the form.
+                        </p>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn">Submit Registration</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Sir. M.V. Layout RWA. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Auto-calculate age from date of birth
+        const dobInput = document.getElementById('id_date_of_birth');
+        const ageInput = document.getElementById('id_age');
+
+        if (dobInput && ageInput) {
+            dobInput.addEventListener('change', function() {
+                if (this.value) {
+                    const dob = new Date(this.value);
+                    const today = new Date();
+                    let age = today.getFullYear() - dob.getFullYear();
+                    const monthDiff = today.getMonth() - dob.getMonth();
+                    
+                    if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < dob.getDate())) {
+                        age--;
+                    }
+                    
+                    ageInput.value = age >= 0 ? age : '';
+                }
+            });
+
+            ageInput.addEventListener('input', function() {
+                if (this.value && dobInput.value) {
+                    const age = parseInt(this.value);
+                    const today = new Date();
+                    const birthYear = today.getFullYear() - age;
+                    dobInput.value = '';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

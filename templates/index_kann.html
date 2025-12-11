@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ಸರ್ ಎಂ.ವಿ. ಲೇಔಟ್ | 4ನೇ ಬ್ಲಾಕ್</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+
+<body>
+  <div class="background-overlay"></div>
+  <header>
+    <div class="header-content">
+      <div class="logo">ನಾವು <strong>ಸರ್ ಎಂ.ವಿ. ಲೇಔಟ್ (4ನೇ ಬ್ಲಾಕ್)</strong></div>
+      <div class="nav-right">
+        <span class="lang-label">ಭಾಷೆ</span>
+        <button id="langToggle" class="lang-btn">ಇಂಗ್ಲಿಷ್</button>
+      </div>
+      <nav>
+        <a href="#about">ಬಗ್ಗೆ</a>
+        <a href="#location">ಸ್ಥಳ</a>
+        <a href="#hospitals">ಆಸ್ಪತ್ರೆಗಳು</a>
+        <a href="#contact">ಸಂಪರ್ಕ</a>
+        <a href="{% url 'register_kannada' %}">ನೋಂದಣಿ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h1 class="background-title">ವಿಶ್ವೇಶ್ವರಯ್ಯ</h1>
+
+    <section id="about" class="content-section">
+      <div class="info-text">
+        <h2>ಮಾಹಿತಿ</h2>
+        <h3>ನಮ್ಮಚ ನೊಂದುತ್ತಿರುವ ಸಮುದಾಯಕ್ಕೆ ಸ್ವಾಗತ.</h3>
+        <p>
+          ನಗರದ ಶಾಂತ ಮೂಲೆಯಲ್ಲಿ ನೆಲೆಸಿರುವ ಸರ್ ಎಂ ವಿಶ್ವೇಶ್ವರಯ್ಯ ಲೇಔಟ್ ಒಂದು ವಾಸಸ್ಥಾನ ಮಾತ್ರವಲ್ಲ — ಇದು ಸಂಪರ್ಕ ಮತ್ತು ಹಂಚಿಕೊಂಡ
+          ಮೌಲ್ಯಗಳ ಮೇಲೆ ನಿರ್ಮಿತ ಸಮುದಾಯ. ನಮ್ಮ ನೆರೆಹೊರೆಯು ಸಹಕಾರ, ಸ್ನೇಹ ಮತ್ತು ಪರಸ್ಪರ ಗೌರವದ ಮನೋಭಾವದಿಂದ ಬೆಳೆಯುತ್ತಿದೆ. ಈ ಜಾಗವು
+          ನಮ್ಮ ನಿವಾಸಿಗಳಿಗೆ ಬೇಕಾದ ಮಾಹಿತಿಗಳು ಮತ್ತು ಚಟುವಟಿಕೆಗಳನ್ನು ಹಂಚಿಕೊಳ್ಳಲು ನಿರ್ಮಿಸಲಾಗಿದೆ.
+        </p>
+      </div>
+      <div class="image-container-circular">
+        <img src="/media/image.png" alt="Sir M Vishweshwaraiah Layout ಪ್ರವೇಶದ್ವಾರ">
+      </div>
+    </section>
+
+    <section id="gallery" class="content-section">
+      <h2>ಸಮುದಾಯ ಗ್ಯಾಲರಿ</h2>
+      <div class="gallery-grid">
+        <figure>
+          <img src="/media/garden.jpeg" alt="Community park during the day">
+          <figcaption>ಬೆಳಗಿನ ನಡೆದಾಟ</figcaption>
+        </figure>
+        <figure>
+          <img src="/media/meet.jpeg" alt="Dog looking at you O_o">
+          <figcaption>ಸಂಜೆಯ ಆಟದ ಸಂದರ್ಭ</figcaption>
+        </figure>
+        <figure>
+          <img src="/media/excercise.jpeg" alt="Well-maintained road in the layout">
+          <figcaption>ಸ್ವಚ್ಛ & ಹಸಿರು</figcaption>
+        </figure>
+        <figure>
+          <img src="/media/meetf.jpeg" alt="Decorative lights during a festival">
+          <figcaption>ಹಬ್ಬದ ರಾತ್ರಿ</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="location" class="content-section map-section">
+      <h2>ಸ್ಥಳ ನಕ್ಷೆ</h2>
+      <div class="Area map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12718.388300916202!2d77.46329168276827!3d12.94466964788891!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3eb471a4db47%3A0x9f8361f64b471c1b!2sSir%20M%20Vishweshwaraiah%20Layout%204th%20Block%2C%20SMV%20Layout%2C%20Bengaluru%2C%20Karnataka!5e1!3m2!1sen!2sin!4v1765266645900!5m2!1sen!2sin"
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section>
+
+    <section id="hospitals" class="content-section hospitals-section">
+      <h2>ಸಮೀಪದ ಆಸ್ಪತ್ರೆಗಳು & ಕ್ಲಿನಿಕ್‌ಗಳು</h2>
+      <p>ಸರ್ ಎಂ ವಿಶ್ವೇಶ್ವರಯ್ಯ ಲೇಔಟ್ ಸುತ್ತಮುತ್ತ ಇರುವ ಆಸ್ಪತ್ರೆಗಳು ಮತ್ತು ಕ್ಲಿನಿಕ್‌ಗಳ ಪಟ್ಟಿ:</p>
+
+      <div class="hospitals-grid">
+
+        <div class="hospital-card">
+          <h3>SSR ಮಲ್ಟಿ ಸ್ಪೆಷಾಲಿಟಿ ಆಸ್ಪತ್ರೆ</h3>
+          <p><strong>ವಿಳಾಸ:</strong> 2111 ಕೆಂಚನಪುರ ರಸ್ತೆ, ದೊಡ್ಡ ಬಸ್ತಿ / ಸೋಣೆನಹಳ್ಳಿ / ಕೆಂಗೇರಿ ಸಾಟ್ಲೈಟ್ ಟೌನ್</p>
+          <p><strong>ಅಂತರ:</strong> ~0.1–1.5 ಕಿಮೀ (4ನೇ ಬ್ಲಾಕ್ SMV ಲೇಔಟ್)</p>
+          <p><strong>ಫೋನ್:</strong> <a href="tel:+919483609529">+91 94836 09529</a></p>
+        </div>
+
+        <div class="hospital-card">
+          <h3>ವಿನಾಯಕ ಕ್ಲಿನಿಕ್</h3>
+          <p><strong>ವಿಳಾಸ:</strong> ದೊಡ್ಡ ಬಸ್ತಿ / 4ನೇ ಬ್ಲಾಕ್, SMV ಲೇಔಟ್ / ವಿಶ್ವೇಶ್ವರಯ್ಯ ಲೇಔಟ್</p>
+          <p><strong>ಅಂತರ:</strong> ~0.2 ಕಿಮೀ</p>
+          <p><strong>ಫೋನ್:</strong> <a href="tel:+919945586098">099455 86098</a></p>
+        </div>
+
+        <div class="hospital-card">
+          <h3>ಶ್ರೀ ಬಾಲಾಜಿ ಮೆಡಿಕಲ್ & ಜನರಲ್ ಸ್ಟೋರ್</h3>
+          <p><strong>ವಿಳಾಸ:</strong> ಮಾರುತಿ ನಗರ / ಸೋಣೆನಹಳ್ಳಿ</p>
+          <p><strong>ಅಂತರ:</strong> ~0.6 ಕಿಮೀ</p>
+          <p><strong>ಫೋನ್:</strong> <a href="tel:+919164943913">091649 43913</a></p>
+        </div>
+
+        <div class="hospital-card">
+          <h3>ವಿಜಯ ಆಸ್ಪತ್ರೆ</h3>
+          <p><strong>ವಿಳಾಸ:</strong> No. 2184, 3ನೇ ಬ್ಲಾಕ್, ವಿಶ್ವೇಶ್ವರಯ್ಯ ಲೇಔಟ್ (ಅಮ್ಮ ಆಶ್ರಮ / ಸೋಣೆನಹಳ್ಳಿ ಸೇತುವೆ ಬಳಿ)</p>
+          <p><strong>ಅಂತರ:</strong> ~1.8 ಕಿಮೀ</p>
+          <p><strong>ಫೋನ್:</strong> <a href="tel:+919448308729">+91 94483 08729</a></p>
+        </div>
+
+        <div class="hospital-card">
+          <h3>ಆದರ್ಶ ಮಲ್ಟಿ ಸ್ಪೆಷಾಲಿಟಿ ಆಸ್ಪತ್ರೆ</h3>
+          <p><strong>ವಿಳಾಸ:</strong> ಸ್ಟೇಜ್ II, ಕೆಂಗೇರಿ ಸಾಟ್ಲೈಟ್ ಟೌನ್</p>
+          <p><strong>ಅಂತರ:</strong> ~1.8–2.0 ಕಿಮೀ</p>
+          <p><strong>ಫೋನ್:</strong> <a href="tel:+917353768545">073537 68545</a></p>
+        </div>
+
+        <div class="hospital-card">
+          <h3>ಶ್ರೇಯ ಆಸ್ಪತ್ರೆ</h3>
+          <p><strong>ವಿಳಾಸ:</strong> ಕೆಂಗೇರಿ ಸಾಟ್ಲೈಟ್ ಟೌನ್</p>
+          <p><strong>ಅಂತರ:</strong> ~1.6–2.0 ಕಿಮೀ</p>
+          <p><strong>ಫೋನ್:</strong> <a href="tel:+918028482958">080 2848 2958</a></p>
+        </div>
+
+        <div class="hospital-card">
+          <h3>ಡರ್ಮಾಕೇರ್ ಸ್ಕಿನ್ ಕ್ಲಿನಿಕ್</h3>
+          <p><strong>ವಿಳಾಸ:</strong> 941/1, 1ನೇ ಮೇನ್ ರೋಡ್, ಸ್ಟೇಜ್ I, ಕೆಂಗೇರಿ ಸಾಟ್ಲೈಟ್ ಟೌನ್</p>
+          <p><strong>ಅಂತರ:</strong> ~1.6 ಕಿಮೀ</p>
+          <p><strong>ಫೋನ್:</strong> <a href="tel:+917349465404">073494 65404</a></p>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="contact" class="content-section contact-section">
+      <h2>ನಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸಿ</h2>
+      <p>ಸಂದೇಹಗಳು, ಸಲಹೆಗಳು, ಅಥವಾ ನಿವಾಸಿಗಳ ವೇಲ್ಫೇರ್ ಅಸೋಸಿಯೇಶನ್‌ಗೆ ಸೇರಲು ಆಸಕ್ತಿ ಇದ್ದರೆ ದಯವಿಟ್ಟು ನಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸಿ.</p>
+
+      <div class="contact-details">
+        <div class="contact-block">
+          <h3>ನಿರ್ವಹಣೆ</h3>
+          <p>hello.smvlayout@email.com</p>
+        </div>
+        <div class="contact-block">
+          <h3>ಅಸೋಸಿಯೇಶನ್ ಕಚೇರಿ</h3>
+          <p>#123, ಸಮುದಾಯ ಭವನ,<br>4ನೇ ಬ್ಲಾಕ್, SMV ಲೇಔಟ್</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 ಸರ್ ಎಂ.ವಿ. ಲೇಔಟ್ RWA. ಎಲ್ಲಾ ಹಕ್ಕುಗಳು ಕಾಯ್ದಿರಿಸಲಾಗಿದೆ.</p>
+  </footer>
+
+  <script src="{% static 'script.js' %}"></script>
+</body>
+
+</html>
