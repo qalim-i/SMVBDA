@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="kn">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ಸರ್ ಎಂ.ವಿ. ಲೇಔಟ್ | 4ನೇ ಬ್ಲಾಕ್</title>
+  <title>ಸರ್. ಎಂ.ವಿ. ಲೇಔಟ್ | 4ನೇ ಬ್ಲಾಕ್</title>
   {% load static %}
   <link rel="stylesheet" href="{% static 'styles.css' %}">
 </head>
@@ -13,36 +13,45 @@
   <div class="background-overlay"></div>
   <header>
     <div class="header-content">
-      <div class="logo">ನಾವು <strong>ಸರ್ ಎಂ.ವಿ. ಲೇಔಟ್ (4ನೇ ಬ್ಲಾಕ್)</strong></div>
+      <button class="mobile-menu-btn" aria-label="ನ್ಯಾವಿಗೇಶನ್ ಟಾಗಲ್ ಮಾಡಿ">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="logo">ನಾವು <strong>ಸರ್. ಎಂ.ವಿ. ಲೇಔಟ್ (4ನೇ ಬ್ಲಾಕ್)</strong></div>
       <div class="nav-right">
         <span class="lang-label">ಭಾಷೆ</span>
         <button id="langToggle" class="lang-btn">ಇಂಗ್ಲಿಷ್</button>
       </div>
-      <nav>
-        <a href="#about">ಬಗ್ಗೆ</a>
+      <nav class="main-nav">
+        <a href="#about">ನಮ್ಮ ಬಗ್ಗೆ</a>
         <a href="#location">ಸ್ಥಳ</a>
-        <a href="#hospitals">ಆಸ್ಪತ್ರೆಗಳು</a>
-        <a href="#contact">ಸಂಪರ್ಕ</a>
+        <a href="#Services">ಸೇವೆಗಳು</a>
+        <a href="#contact">ಸಂಪರ್ಕಿಸಿ</a>
         <a href="{% url 'register_kannada' %}">ನೋಂದಣಿ</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <h1 class="background-title">ವಿಶ್ವೇಶ್ವರಯ್ಯ</h1>
+    <h1 class="background-title">ವಿಶ್ವೇಶ್ವ<br />ರಯ್ಯ</h1>
 
     <section id="about" class="content-section">
       <div class="info-text">
         <h2>ಮಾಹಿತಿ</h2>
-        <h3>ನಮ್ಮಚ ನೊಂದುತ್ತಿರುವ ಸಮುದಾಯಕ್ಕೆ ಸ್ವಾಗತ.</h3>
+        <h3>ನಮ್ಮ ರೋಚಕ ಸಮುದಾಯಕ್ಕೆ ಸ್ವಾಗತ.</h3>
         <p>
-          ನಗರದ ಶಾಂತ ಮೂಲೆಯಲ್ಲಿ ನೆಲೆಸಿರುವ ಸರ್ ಎಂ ವಿಶ್ವೇಶ್ವರಯ್ಯ ಲೇಔಟ್ ಒಂದು ವಾಸಸ್ಥಾನ ಮಾತ್ರವಲ್ಲ — ಇದು ಸಂಪರ್ಕ ಮತ್ತು ಹಂಚಿಕೊಂಡ
-          ಮೌಲ್ಯಗಳ ಮೇಲೆ ನಿರ್ಮಿತ ಸಮುದಾಯ. ನಮ್ಮ ನೆರೆಹೊರೆಯು ಸಹಕಾರ, ಸ್ನೇಹ ಮತ್ತು ಪರಸ್ಪರ ಗೌರವದ ಮನೋಭಾವದಿಂದ ಬೆಳೆಯುತ್ತಿದೆ. ಈ ಜಾಗವು
-          ನಮ್ಮ ನಿವಾಸಿಗಳಿಗೆ ಬೇಕಾದ ಮಾಹಿತಿಗಳು ಮತ್ತು ಚಟುವಟಿಕೆಗಳನ್ನು ಹಂಚಿಕೊಳ್ಳಲು ನಿರ್ಮಿಸಲಾಗಿದೆ.
+          ಸರ್ ಎಂ. ವಿಶ್ವೇಶ್ವರಯ್ಯ ಲೇಔಟ್ 4ನೇ ಬ್ಲಾಕ್ ಪಶ್ಚಿಮ ಬೆಂಗಳೂರಿನ NICE ರಿಂಗ್ ರೋಡ್‌ಗೆ ಸಮೀಪದಲ್ಲಿರುವ ಉತ್ತಮ ಯೋಜಿತ
+          ವಸತಿ ಪ್ರದೇಶವಾಗಿದೆ. ಇದು ದೊಡ್ಡ ಬಸ್ತಿ ಮತ್ತು ಚಿಕ್ಕ ಬಸ್ತಿಯಂತಹ ಸ್ಥಾಪಿತ ಪ್ರದೇಶಗಳಿಂದ ಸುತ್ತುವರೆದಿದೆ. ಈ
+          ಪ್ರದೇಶವು ಕೆ.ಆರ್. ಮಾರ್ಕೆಟ್‌ನಿಂದ ಸುಮಾರು 15 ಕಿ.ಮೀ. ದೂರದಲ್ಲಿದೆ ಮತ್ತು BMTC ಬಸ್‌ಗಳು, ವಿಶೇಷವಾಗಿ 223 ಸರಣಿಯ
+          ಮೂಲಕ ಉತ್ತಮವಾಗಿ ಸಂಪರ್ಕಿತವಾಗಿದೆ. ಈ ಪ್ರದೇಶವು ಹತ್ತಿರದ ಶೈಕ್ಷಣಿಕ ಸಂಸ್ಥೆಗಳು, ಆರೋಗ್ಯ ಸೌಲಭ್ಯಗಳು ಮತ್ತು ಮೈಸೂರು
+          ರೋಡ್ ಮತ್ತು ಮಾಗಡಿ ರೋಡ್ ಕಾರಿಡಾರ್‌ಗಳಿಗೆ ಸುಲಭ ಪ್ರವೇಶದಿಂದ ಪ್ರಯೋಜನ ಪಡೆಯುತ್ತದೆ.
         </p>
       </div>
       <div class="image-container-circular">
-        <img src="/media/image.png" alt="Sir M Vishweshwaraiah Layout ಪ್ರವೇಶದ್ವಾರ">
+        <img src="/media/image.png"
+          alt="ಭೂದೃಶ್ಯ ತೋಟಗಳು ಮತ್ತು ಸ್ವಾಗತ ಫಲಕಗಳೊಂದಿಗೆ ಸರ್ ಎಂ ವಿಶ್ವೇಶ್ವರಯ್ಯ ಲೇಔಟ್ 4ನೇ ಬ್ಲಾಕ್‌ಗೆ ಪ್ರವೇಶ ದ್ವಾರ, ಸಮುದಾಯದ ಶುಚಿ ಮತ್ತು ಉತ್ತಮ ನಿರ್ವಹಣೆಯ ವಾತಾವರಣವನ್ನು ಪ್ರದರ್ಶಿಸುತ್ತದೆ">
+
       </div>
     </section>
 
@@ -50,20 +59,20 @@
       <h2>ಸಮುದಾಯ ಗ್ಯಾಲರಿ</h2>
       <div class="gallery-grid">
         <figure>
-          <img src="/media/garden.jpeg" alt="Community park during the day">
-          <figcaption>ಬೆಳಗಿನ ನಡೆದಾಟ</figcaption>
+          <img src="/media/garden.jpeg" alt="ಹಗಲು ವೇಳೆಯ ಸಮುದಾಯ ಉದ್ಯಾನವನ">
+          <figcaption>ಬೆಳಗಿನ ವಾಕಿಂಗ್</figcaption>
         </figure>
         <figure>
-          <img src="/media/meet.jpeg" alt="Dog looking at you O_o">
-          <figcaption>ಸಂಜೆಯ ಆಟದ ಸಂದರ್ಭ</figcaption>
+          <img src="/media/meet.jpeg" alt="ನಿಮ್ಮನ್ನು ನೋಡುತ್ತಿರುವ ನಾಯಿ O_o">
+          <figcaption>ಶುಚಿ ಮತ್ತು ಹಸಿರು</figcaption>
         </figure>
         <figure>
-          <img src="/media/excercise.jpeg" alt="Well-maintained road in the layout">
-          <figcaption>ಸ್ವಚ್ಛ & ಹಸಿರು</figcaption>
+          <img src="/media/excercise.jpeg" alt="ಲೇಔಟ್‌ನಲ್ಲಿ ಉತ್ತಮವಾಗಿ ನಿರ್ವಹಿಸಿದ ರಸ್ತೆ">
+          <figcaption>ಸಂಜೆಯ ಆಟದ ಸಮಯ</figcaption>
         </figure>
         <figure>
-          <img src="/media/meetf.jpeg" alt="Decorative lights during a festival">
-          <figcaption>ಹಬ್ಬದ ರಾತ್ರಿ</figcaption>
+          <img src="/media/meetf.jpeg" alt="ಹಬ್ಬದ ಸಮಯದಲ್ಲಿ ಅಲಂಕಾರಿಕ ದೀಪಗಳು">
+          <figcaption>ಹಬ್ಬದ ರಾತ್ರಿಗಳು</figcaption>
         </figure>
       </div>
     </section>
@@ -78,83 +87,315 @@
       </div>
     </section>
 
-    <section id="hospitals" class="content-section hospitals-section">
-      <h2>ಸಮೀಪದ ಆಸ್ಪತ್ರೆಗಳು & ಕ್ಲಿನಿಕ್‌ಗಳು</h2>
-      <p>ಸರ್ ಎಂ ವಿಶ್ವೇಶ್ವರಯ್ಯ ಲೇಔಟ್ ಸುತ್ತಮುತ್ತ ಇರುವ ಆಸ್ಪತ್ರೆಗಳು ಮತ್ತು ಕ್ಲಿನಿಕ್‌ಗಳ ಪಟ್ಟಿ:</p>
+    <section id="Services" class="content-section">
+      <h2 style="text-align: center; margin-bottom: 2rem;">ನಮ್ಮ ಸೇವೆಗಳು</h2>
 
-      <div class="hospitals-grid">
+      <div class="tabs-nav">
+        <button class="tab-btn" data-target="hospitals">ಆಸ್ಪತ್ರೆಗಳು</button>
+        <button class="tab-btn" data-target="connectivity">ಸಂಪರ್ಕ</button>
+        <button class="tab-btn active" data-target="public-facilities">ಸಾರ್ವಜನಿಕ ಸೌಲಭ್ಯಗಳು</button>
+      </div>
 
-        <div class="hospital-card">
-          <h3>SSR ಮಲ್ಟಿ ಸ್ಪೆಷಾಲಿಟಿ ಆಸ್ಪತ್ರೆ</h3>
-          <p><strong>ವಿಳಾಸ:</strong> 2111 ಕೆಂಚನಪುರ ರಸ್ತೆ, ದೊಡ್ಡ ಬಸ್ತಿ / ಸೋಣೆನಹಳ್ಳಿ / ಕೆಂಗೇರಿ ಸಾಟ್ಲೈಟ್ ಟೌನ್</p>
-          <p><strong>ಅಂತರ:</strong> ~0.1–1.5 ಕಿಮೀ (4ನೇ ಬ್ಲಾಕ್ SMV ಲೇಔಟ್)</p>
-          <p><strong>ಫೋನ್:</strong> <a href="tel:+919483609529">+91 94836 09529</a></p>
+      <div class="services-container">
+
+        <!-- Hospitals Panel -->
+        <div id="hospitals" class="tab-panel">
+          <div class="inner-content">
+            <h2>ಹತ್ತಿರದ ಆಸ್ಪತ್ರೆಗಳು ಮತ್ತು ಕ್ಲಿನಿಕ್‌ಗಳು</h2>
+            <p>ಸರ್ ಎಂ ವಿಶ್ವೇಶ್ವರಯ್ಯ ಲೇಔಟ್ ಸುತ್ತಮುತ್ತಲಿನ ಕೆಲವು ಆಸ್ಪತ್ರೆಗಳು ಮತ್ತು ಕ್ಲಿನಿಕ್‌ಗಳು ಇಲ್ಲಿವೆ:</p>
+            <div class="hospitals-grid">
+              <div class="hospital-card">
+                <h3>ಎಸ್ಎಸ್ಆರ್ ಮಲ್ಟಿ ಸ್ಪೆಷಾಲಿಟಿ ಆಸ್ಪತ್ರೆ</h3>
+                <p><strong>ವಿಳಾಸ:</strong> 2111 ಕೆಂಚನಾಪುರ ರಸ್ತೆ, ದೊಡ್ಡ ಬಸ್ತಿ</p>
+                <p><strong>ದೂರ:</strong> ~0.1–1.5 ಕಿ.ಮೀ</p>
+                <p><strong>ದೂರವಾಣಿ:</strong><a href="tel:+91 94836 09529">+91 94836 09529</a></p>
+              </div>
+              <div class="hospital-card">
+                <h3>ವಿನಾಯಕ ಕ್ಲಿನಿಕ್</h3>
+                <p><strong>ವಿಳಾಸ:</strong> ದೊಡ್ಡ ಬಸ್ತಿ / 4ನೇ ಬ್ಲಾಕ್</p>
+                <p><strong>ದೂರ:</strong> ~0.2 ಕಿ.ಮೀ</p>
+                <p><strong>ದೂರವಾಣಿ:</strong><a href="tel:099455 86098">099455 86098</a></p>
+              </div>
+              <div class="hospital-card">
+                <h3>ಶ್ರೀ ಬಾಲಾಜಿ ಮೆಡಿಕಲ್ ಮತ್ತು ಜನರಲ್ ಸ್ಟೋರ್</h3>
+                <p><strong>ವಿಳಾಸ:</strong> ಮಾರುತಿ ನಗರ</p>
+                <p><strong>ದೂರ:</strong> ~0.6 ಕಿ.ಮೀ</p>
+                <p><strong>ದೂರವಾಣಿ:</strong><a href="tel:091649 43913">091649 43913</a></p>
+              </div>
+              <div class="hospital-card">
+                <h3>ವಿಜಯ ಆಸ್ಪತ್ರೆ</h3>
+                <p><strong>ವಿಳಾಸ:</strong> 3ನೇ ಬ್ಲಾಕ್, ವಿಶ್ವೇಶ್ವರಯ್ಯ ಲೇಔಟ್</p>
+                <p><strong>ದೂರ:</strong> ~1.8 ಕಿ.ಮೀ</p>
+                <p><strong>ದೂರವಾಣಿ:</strong> <a href="tel:+91 94483 08729">+91 94483 08729</a></p>
+              </div>
+              <div class="hospital-card">
+                <h3>ಆದರ್ಶ ಮಲ್ಟಿ ಸ್ಪೆಷಾಲಿಟಿ ಆಸ್ಪತ್ರೆ</h3>
+                <p><strong>ವಿಳಾಸ:</strong> ಹಂತ II, ಕೆಂಗೇರಿ ಸ್ಯಾಟಲೈಟ್ ಟೌನ್</p>
+                <p><strong>ದೂರ:</strong> ~1.8 ಕಿ.ಮೀ</p>
+                <p><strong>ದೂರವಾಣಿ:</strong> <a href="tel:073537 68545">073537 68545</a></p>
+              </div>
+              <div class="hospital-card">
+                <h3>ಶ್ರೇಯ ಆಸ್ಪತ್ರೆ</h3>
+                <p><strong>ವಿಳಾಸ:</strong> ಕೆಂಗೇರಿ ಸ್ಯಾಟಲೈಟ್ ಟೌನ್</p>
+                <p><strong>ದೂರ:</strong> ~1.6 ಕಿ.ಮೀ</p>
+                <p><strong>ದೂರವಾಣಿ:</strong> <a href="tel:080 2848 2958">080 2848 2958</a></p>
+              </div>
+              <div class="hospital-card">
+                <h3>ಡರ್ಮಾಕೇರ್ ಸ್ಕಿನ್ ಕ್ಲಿನಿಕ್</h3>
+                <p><strong>ವಿಳಾಸ:</strong> ಹಂತ I, ಕೆಂಗೇರಿ ಸ್ಯಾಟಲೈಟ್ ಟೌನ್</p>
+                <p><strong>ದೂರ:</strong> ~1.6 ಕಿ.ಮೀ</p>
+                <p><strong>ದೂರವಾಣಿ:</strong><a href="tel:073494 65404">073494 65404</a></p>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div class="hospital-card">
-          <h3>ವಿನಾಯಕ ಕ್ಲಿನಿಕ್</h3>
-          <p><strong>ವಿಳಾಸ:</strong> ದೊಡ್ಡ ಬಸ್ತಿ / 4ನೇ ಬ್ಲಾಕ್, SMV ಲೇಔಟ್ / ವಿಶ್ವೇಶ್ವರಯ್ಯ ಲೇಔಟ್</p>
-          <p><strong>ಅಂತರ:</strong> ~0.2 ಕಿಮೀ</p>
-          <p><strong>ಫೋನ್:</strong> <a href="tel:+919945586098">099455 86098</a></p>
+        <!-- Connectivity Panel -->
+        <div id="connectivity" class="tab-panel">
+          <div class="inner-content">
+            <h2>ಸಂಪರ್ಕ ಮತ್ತು ಸಾರಿಗೆ</h2>
+
+            <div class="services-grid">
+              <!-- Road Card -->
+              <div class="service-card">
+                <div class="card-header">
+                  <span class="card-icon">🛣️</span>
+                  <h3 class="card-title">ರಸ್ತೆ ಜಾಲ</h3>
+                </div>
+                <ul class="card-list">
+                  <li>
+                    <span>📍</span>
+                    <a href="https://www.google.com/maps/search/NH+275+Bangalore" target="_blank">NH-275 (ಮೈಸೂರು
+                      ರಸ್ತೆ)</a>
+                  </li>
+                  <li>
+                    <span>📍</span>
+                    <a href="https://www.google.com/maps/search/NH+75+Bangalore" target="_blank">NH-75 (ತುಮಕೂರು
+                      ರಸ್ತೆ)</a>
+                  </li>
+                  <li>
+                    <span>🚌</span>
+                    <span>NICE ರಿಂಗ್ ರೋಡ್ ಕಾರಿಡಾರ್‌ಗಳ ಮೂಲಕ ಪ್ರಮುಖ ಸಂಪರ್ಕ.</span>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Rail Card -->
+              <div class="service-card">
+                <div class="card-header">
+                  <span class="card-icon">🚂</span>
+                  <h3 class="card-title">ರೈಲ್ವೆ</h3>
+                </div>
+                <ul class="card-list">
+                  <li>
+                    <span>🚉</span>
+                    <a href="https://maps.app.goo.gl/VU91VzmzPWyst6H56" target="_blank">ಕೆಂಗೇರಿ
+                      ನಿಲ್ದಾಣ</a>
+                    <span style="font-size:0.8em; color:#888;">(ಪ್ರಮುಖ ಕೇಂದ್ರ)</span>
+                  </li>
+                  <li>
+                    <span>🚉</span>
+                    <a href="https://maps.app.goo.gl/2wPbXt1coLsAU8kT8" target="_blank">ಕೆಎಸ್ಆರ್
+                      ಸಿಟಿ ಜಂಕ್ಷನ್</a>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Metro Card -->
+              <div class="service-card">
+                <div class="card-header">
+                  <span class="card-icon">🚇</span>
+                  <h3 class="card-title">ನಮ್ಮ ಮೆಟ್ರೋ</h3>
+                </div>
+                <ul class="card-list">
+                  <li>
+                    <span>🟣</span>
+                    <a href="https://maps.app.goo.gl/Ska3g9d6AT6Nupc37" target="_blank">ಕೆಂಗೇರಿ
+                      ಮೆಟ್ರೋ ನಿಲ್ದಾಣ</a>
+                  </li>
+                  <li>
+                    <span>🔗</span>
+                    <span>ಪರ್ಪಲ್ ಲೈನ್ ಪ್ರಮುಖ ತಂತ್ರಜ್ಞಾನ ಉದ್ಯಾನವನಗಳು ಮತ್ತು ನಗರ ಕೇಂದ್ರವನ್ನು
+                      ಸಂಪರ್ಕಿಸುತ್ತದೆ.</span>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Bus Card -->
+              <div class="service-card">
+                <div class="card-header">
+                  <span class="card-icon">🚌</span>
+                  <h3 class="card-title">BMTC ಬಸ್‌ಗಳು</h3>
+                </div>
+                <p style="font-size: 0.9rem; margin-bottom: 1rem;">ಪ್ರಮುಖ ಕೇಂದ್ರಗಳಿಗೆ ಆಗಾಗ್ಗೆ ಬಸ್‌ಗಳು:
+                </p>
+                <ul class="card-list">
+                  <li><strong>401KA:</strong> ರಾಮಸಂದ್ರ – ಯಲಹಂಕ</li>
+                  <li><strong>221C:</strong> ಕೆಆರ್ ಮಾರ್ಕೆಟ್ – ದೊಡ್ಡಬಸ್ತಿ</li>
+                  <li><strong>223 ಸರಣಿ:</strong> ಶಿವಾಜಿನಗರ – ಎಸ್ಎಂವಿ ಲೇಔಟ್</li>
+                </ul>
+                <div style="margin-top: 1rem; border-top: 1px dashed #eee; padding-top: 1rem;">
+                  <strong style="display: block; margin-bottom: 0.5rem; color: #333;">ಹತ್ತಿರದ ಬಸ್
+                    ನಿಲ್ದಾಣಗಳು:</strong>
+                  <ul class="card-list">
+                    <li><span>🚏</span> <a href="https://www.google.com/maps/search/Ramasandra+Bus+Stop+Bangalore"
+                        target="_blank">ರಾಮಸಂದ್ರ</a></li>
+                    <li><span>🚏</span> <a href="https://www.google.com/maps/search/Manganahalli+Bus+Stop+Bangalore"
+                        target="_blank">ಮಂಗನಹಳ್ಳಿ</a></li>
+                    <li><span>🚏</span> <a href="https://www.google.com/maps/search/Ullal+Bus+Stop+Bangalore"
+                        target="_blank">ಉಳ್ಳಾಲ್</a></li>
+                    <li><span>🚏</span> <a href="https://www.google.com/maps/search/Dodda+Basti+Bus+Stop+Bangalore"
+                        target="_blank">ದೊಡ್ಡ ಬಸ್ತಿ</a></li>
+                    <li><span>🚏</span> <a href="https://www.google.com/maps/search/Maruthinagar+Bus+Stop+Bangalore"
+                        target="_blank">ಮಾರುತಿನಗರ</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+          </div>
         </div>
 
-        <div class="hospital-card">
-          <h3>ಶ್ರೀ ಬಾಲಾಜಿ ಮೆಡಿಕಲ್ & ಜನರಲ್ ಸ್ಟೋರ್</h3>
-          <p><strong>ವಿಳಾಸ:</strong> ಮಾರುತಿ ನಗರ / ಸೋಣೆನಹಳ್ಳಿ</p>
-          <p><strong>ಅಂತರ:</strong> ~0.6 ಕಿಮೀ</p>
-          <p><strong>ಫೋನ್:</strong> <a href="tel:+919164943913">091649 43913</a></p>
-        </div>
+        <!-- Public Facilities Panel (Active by Default) -->
+        <div id="public-facilities" class="tab-panel active">
+          <div class="inner-content">
+            <h2>ಸಾರ್ವಜನಿಕ ಸೌಲಭ್ಯಗಳು ಮತ್ತು ಅನುಕೂಲಗಳು</h2>
 
-        <div class="hospital-card">
-          <h3>ವಿಜಯ ಆಸ್ಪತ್ರೆ</h3>
-          <p><strong>ವಿಳಾಸ:</strong> No. 2184, 3ನೇ ಬ್ಲಾಕ್, ವಿಶ್ವೇಶ್ವರಯ್ಯ ಲೇಔಟ್ (ಅಮ್ಮ ಆಶ್ರಮ / ಸೋಣೆನಹಳ್ಳಿ ಸೇತುವೆ ಬಳಿ)</p>
-          <p><strong>ಅಂತರ:</strong> ~1.8 ಕಿಮೀ</p>
-          <p><strong>ಫೋನ್:</strong> <a href="tel:+919448308729">+91 94483 08729</a></p>
-        </div>
+            <div class="services-grid">
+              <!-- Education Card -->
+              <div class="service-card">
+                <div class="card-header">
+                  <span class="card-icon">🎓</span>
+                  <h3 class="card-title">ಶಿಕ್ಷಣ</h3>
+                </div>
+                <ul class="card-list">
+                  <li><a href="https://www.google.com/maps/search/JVM+International+School+SMV+Layout+Bangalore"
+                      target="_blank" rel="noopener noreferrer">ಜೆವಿಎಂ ಇಂಟರ್ನ್ಯಾಶನಲ್ ಸ್ಕೂಲ್</a>
+                  </li>
+                  <li><a href="https://www.google.com/maps/search/Sri+Chaitanya+PU+College+Ullal+Bangalore"
+                      target="_blank" rel="noopener noreferrer">ಶ್ರೀ ಚೈತನ್ಯ ಪಿಯು ಕಾಲೇಜು</a></li>
+                  <li><a href="https://www.google.com/maps/search/Karnataka+Institute+of+Leather+Technology+Bangalore"
+                      target="_blank" rel="noopener noreferrer">ಲೆದರ್ ಟೆಕ್ನಾಲಜಿ ಸಂಸ್ಥೆ</a></li>
+                  <li><a href="https://www.google.com/maps/search/Narayana+PU+College+Jnana+Ganga+Nagar+Bangalore"
+                      target="_blank" rel="noopener noreferrer">ನಾರಾಯಣ ಪಿಯು ಕಾಲೇಜು</a></li>
+                  <li><a href="https://www.google.com/maps/search/Amrita+Vidyalayam+Jnana+Ganga+Nagar+Bangalore"
+                      target="_blank" rel="noopener noreferrer">ಅಮೃತ ವಿದ್ಯಾಲಯಂ</a></li>
+                  <li><a href="https://maps.app.goo.gl/4tuJ16Z1uRNEZyjMA" target="_blank"
+                      rel="noopener noreferrer">ಸೇಂಟ್
+                      ಪೀಟರ್ ಹೈ ಸ್ಕೂಲ್</a></li>
+                </ul>
+              </div>
 
-        <div class="hospital-card">
-          <h3>ಆದರ್ಶ ಮಲ್ಟಿ ಸ್ಪೆಷಾಲಿಟಿ ಆಸ್ಪತ್ರೆ</h3>
-          <p><strong>ವಿಳಾಸ:</strong> ಸ್ಟೇಜ್ II, ಕೆಂಗೇರಿ ಸಾಟ್ಲೈಟ್ ಟೌನ್</p>
-          <p><strong>ಅಂತರ:</strong> ~1.8–2.0 ಕಿಮೀ</p>
-          <p><strong>ಫೋನ್:</strong> <a href="tel:+917353768545">073537 68545</a></p>
-        </div>
+              <!-- Temples Card -->
+              <div class="service-card">
+                <div class="card-header">
+                  <span class="card-icon">🕉️</span>
+                  <h3 class="card-title">ದೇವಾಲಯಗಳು</h3>
+                </div>
+                <ul class="card-list">
+                  <li><a href="https://www.google.com/maps/search/Sri+Veeranjaneya+Swamy+Temple+Dodda+Basti+Bangalore"
+                      target="_blank" rel="noopener noreferrer">ಶ್ರೀ ವೀರಂಜನೇಯ ಸ್ವಾಮಿ ದೇವಾಲಯ</a>
+                  </li>
+                  <li><a href="https://www.google.com/maps/search/Shirdi+Sai+Baba+Temple+Chikka+Basti+Bangalore"
+                      target="_blank" rel="noopener noreferrer">ಶಿರಡಿ ಸಾಯಿ ಬಾಬಾ ದೇವಾಲಯ</a></li>
+                  <li><a href="https://www.google.com/maps/search/Lakshmi+Devamma+Temple+Kenchanapura+Road+Bangalore"
+                      target="_blank" rel="noopener noreferrer">ಲಕ್ಷ್ಮೀ ದೇವಮ್ಮ ದೇವಾಲಯ</a></li>
+                  <li><a href="https://www.google.com/maps/search/Anjaneya+Temple+Sonnenahalli+Bangalore"
+                      target="_blank" rel="noopener noreferrer">ಆಂಜನೇಯ ದೇವಾಲಯ</a></li>
+                </ul>
+              </div>
 
-        <div class="hospital-card">
-          <h3>ಶ್ರೇಯ ಆಸ್ಪತ್ರೆ</h3>
-          <p><strong>ವಿಳಾಸ:</strong> ಕೆಂಗೇರಿ ಸಾಟ್ಲೈಟ್ ಟೌನ್</p>
-          <p><strong>ಅಂತರ:</strong> ~1.6–2.0 ಕಿಮೀ</p>
-          <p><strong>ಫೋನ್:</strong> <a href="tel:+918028482958">080 2848 2958</a></p>
-        </div>
+              <!-- Mosques Card -->
+              <div class="service-card">
+                <div class="card-header">
+                  <span class="card-icon">🕌</span>
+                  <h3 class="card-title">ಮಸೀದಿಗಳು</h3>
+                </div>
+                <ul class="card-list">
+                  <li><a href="https://www.google.com/maps/search/Masjid-e-Noorani+Ramasandra+Main+Road+Bangalore"
+                      target="_blank" rel="noopener noreferrer">ಮಸ್ಜಿದ್-ಎ-ನೂರಾನಿ</a></li>
+                  <li><a href="https://www.google.com/maps/search/Masjid-e-Ahmed+Ali+Dodda+Basti+Bangalore"
+                      target="_blank" rel="noopener noreferrer">ಮಸ್ಜಿದ್-ಎ-ಅಹ್ಮದ್ ಅಲಿ</a></li>
+                  <li><a href="https://maps.app.goo.gl/ooFVU2hVyBRoZFFS6" target="_blank"
+                      rel="noopener noreferrer">ಮಸ್ಜಿದ್ ಅಲಿ ಖಲೀಫಾ</a></li>
+                </ul>
+              </div>
 
-        <div class="hospital-card">
-          <h3>ಡರ್ಮಾಕೇರ್ ಸ್ಕಿನ್ ಕ್ಲಿನಿಕ್</h3>
-          <p><strong>ವಿಳಾಸ:</strong> 941/1, 1ನೇ ಮೇನ್ ರೋಡ್, ಸ್ಟೇಜ್ I, ಕೆಂಗೇರಿ ಸಾಟ್ಲೈಟ್ ಟೌನ್</p>
-          <p><strong>ಅಂತರ:</strong> ~1.6 ಕಿಮೀ</p>
-          <p><strong>ಫೋನ್:</strong> <a href="tel:+917349465404">073494 65404</a></p>
+              <!-- ATMs/Banking Card -->
+              <div class="service-card">
+                <div class="card-header">
+                  <span class="card-icon">🏧</span>
+                  <h3 class="card-title">ಬ್ಯಾಂಕಿಂಗ್ ಮತ್ತು ಎಟಿಎಂಗಳು</h3>
+                </div>
+                <ul class="card-list">
+                  <li><a href="https://www.google.com/maps/search/SBI+ATM+SMV+Layout+Bangalore" target="_blank"
+                      rel="noopener noreferrer">ಎಸ್ಬಿಐ ಎಟಿಎಂ</a></li>
+                  <li><a href="https://www.google.com/maps/search/Syndicate+Bank+ATM+Ramasandra+Bangalore"
+                      target="_blank" rel="noopener noreferrer">ಸಿಂಡಿಕೇಟ್ ಬ್ಯಾಂಕ್ ಎಟಿಎಂ</a></li>
+                  <li><a href="https://www.google.com/maps/search/Karnataka+Bank+ATM+Jnana+Ganga+Nagar+Bangalore"
+                      target="_blank" rel="noopener noreferrer">ಕರ್ನಾಟಕ ಬ್ಯಾಂಕ್ ಎಟಿಎಂ</a></li>
+                </ul>
+              </div>
+
+              <!-- Parks Card -->
+              <div class="service-card">
+                <div class="card-header">
+                  <span class="card-icon">🌳</span>
+                  <h3 class="card-title">ಉದ್ಯಾನವನಗಳು</h3>
+                </div>
+                <ul class="card-list">
+                  <li><a href="https://www.google.com/maps/search/BDA+Park+SMV+Layout+5th+Block+Bangalore"
+                      target="_blank" rel="noopener noreferrer">ಬಿಡಿಎ ಉದ್ಯಾನವನ (5ನೇ ಬ್ಲಾಕ್)</a>
+                  </li>
+                  <li><a href="https://www.google.com/maps/place/Kommaghatta+Lake" target="_blank"
+                      rel="noopener noreferrer">ಕೊಮ್ಮಘಟ್ಟ ಸರೋವರ ಉದ್ಯಾನವನ</a></li>
+                </ul>
+              </div>
+
+              <!-- Safety & Govt Card -->
+              <div class="service-card">
+                <div class="card-header">
+                  <span class="card-icon">🛡️</span>
+                  <h3 class="card-title">ಸುರಕ್ಷತೆ ಮತ್ತು ಆಡಳಿತ</h3>
+                </div>
+                <ul class="card-list">
+                  <li><a href="https://maps.app.goo.gl/YRcLZaK8Y5o8wYez9" target="_blank"
+                      rel="noopener noreferrer">ಜ್ಞಾನಭಾರತಿ ಪೊಲೀಸ್ ಠಾಣೆ</a></li>
+                  <li><a href="https://maps.app.goo.gl/Z5EMrxXsdfhxTBiC7" target="_blank"
+                      rel="noopener noreferrer">ಕೆಂಗೇರಿ ಪೊಲೀಸ್ ಠಾಣೆ</a></li>
+                  <li><a href="https://maps.app.goo.gl/Wm53uXopYTkWyNLh6" target="_blank"
+                      rel="noopener noreferrer">ಬ್ಯಾದರಹಳ್ಳಿ ಪೊಲೀಸ್ ಠಾಣೆ</a></li>
+                  <li><a href="https://maps.app.goo.gl/sxx9hUwAjmyuGnpK9" target="_blank" rel="noopener noreferrer">BBMP
+                      ವಾರ್ಡ್ ಕಛೇರಿ</a></li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
         </div>
 
       </div>
     </section>
 
+
     <section id="contact" class="content-section contact-section">
       <h2>ನಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸಿ</h2>
-      <p>ಸಂದೇಹಗಳು, ಸಲಹೆಗಳು, ಅಥವಾ ನಿವಾಸಿಗಳ ವೇಲ್ಫೇರ್ ಅಸೋಸಿಯೇಶನ್‌ಗೆ ಸೇರಲು ಆಸಕ್ತಿ ಇದ್ದರೆ ದಯವಿಟ್ಟು ನಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸಿ.</p>
-
+      <p>ವಿಚಾರಣೆಗಳು, ಸಲಹೆಗಳು ಅಥವಾ ನಿವಾಸಿಗಳ ಕಲ್ಯಾಣ ಸಂಘದೊಂದಿಗೆ ತೊಡಗಿಸಿಕೊಳ್ಳಲು, ದಯವಿಟ್ಟು ಸಂಪರ್ಕಿಸಿ.</p>
       <div class="contact-details">
         <div class="contact-block">
           <h3>ನಿರ್ವಹಣೆ</h3>
           <p>hello.smvlayout@email.com</p>
         </div>
         <div class="contact-block">
-          <h3>ಅಸೋಸಿಯೇಶನ್ ಕಚೇರಿ</h3>
-          <p>#123, ಸಮುದಾಯ ಭವನ,<br>4ನೇ ಬ್ಲಾಕ್, SMV ಲೇಔಟ್</p>
+          <h3>ಸಂಘದ ಕಛೇರಿ</h3>
+          <p>#123, ಸಮುದಾಯ ಸಭಾಂಗಣ,<br>4ನೇ ಬ್ಲಾಕ್, ಎಸ್ಎಂವಿ ಲೇಔಟ್</p>
         </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 ಸರ್ ಎಂ.ವಿ. ಲೇಔಟ್ RWA. ಎಲ್ಲಾ ಹಕ್ಕುಗಳು ಕಾಯ್ದಿರಿಸಲಾಗಿದೆ.</p>
+    <p>&copy; 2025 ಸರ್. ಎಂ.ವಿ. ಲೇಔಟ್ RWA. ಎಲ್ಲಾ ಹಕ್ಕುಗಳನ್ನು ಕಾಯ್ದಿರಿಸಲಾಗಿದೆ.</p>
   </footer>
 
   <script src="{% static 'script.js' %}"></script>

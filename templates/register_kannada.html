@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="kn">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,13 +9,25 @@
     <link rel="stylesheet" href="{% static 'styles.css' %}">
     <link rel="stylesheet" href="{% static 'register.css' %}">
 </head>
+
 <body>
     <header>
         <div class="header-content">
+            <button class="mobile-menu-btn" aria-label="ನ್ಯಾವಿಗೇಶನ್ ಟಾಗಲ್ ಮಾಡಿ">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <div class="logo">ನಾವು <strong>ಸರ್. ಎಂ.ವಿ. ಲೇಔಟ್ (4ನೇ ಬ್ಲಾಕ್)</strong></div>
-            <nav>
-                <a href="{% url 'index' %}">English</a>
-                <a href="{% url 'index_kannada' %}">ಮುಖಪುಟ</a>
+            <div class="nav-right">
+                <span class="lang-label">ಭಾಷೆ</span>
+                <button id="langToggle" class="lang-btn">ಇಂಗ್ಲಿಷ್</button>
+            </div>
+            <nav class="main-nav">
+                <a href="{% url 'index_kannada' %}#about">ನಮ್ಮ ಬಗ್ಗೆ</a>
+                <a href="{% url 'index_kannada' %}#location">ಸ್ಥಳ</a>
+                <a href="{% url 'index_kannada' %}#Services">ಸೇವೆಗಳು</a>
+                <a href="{% url 'index_kannada' %}#contact">ಸಂಪರ್ಕಿಸಿ</a>
                 <a href="{% url 'register_kannada' %}">ನೋಂದಣಿ</a>
             </nav>
         </div>
@@ -23,27 +36,28 @@
         <div class="content-section">
             <h1 class="page-title">ನೋಂದಣಿ ಫಾರ್ಮ್</h1>
             <p class="subtitle">ನಮ್ಮ ಸಮುದಾಯದೊಂದಿಗೆ ನೋಂದಾಯಿಸಲು ದಯವಿಟ್ಟು ಎಲ್ಲಾ ಅಗತ್ಯ ವಿವರಗಳನ್ನು ಭರ್ತಿ ಮಾಡಿ</p>
-            
+
             {% if success_message %}
-                <div class="success-message">{{ success_message }}</div>
+            <div class="success-message">{{ success_message }}</div>
             {% endif %}
-            
+
             <form method="post" class="registration-form">
                 {% csrf_token %}
-                
+
                 <div class="form-group">
                     <label for="{{ form.name.id_for_label }}">ನೋಂದಣಿದಾರರ ಹೆಸರು <span class="required">*</span></label>
                     {{ form.name }}
                     {% if form.name.errors %}
-                        <div class="error-message">{{ form.name.errors.0 }}</div>
+                    <div class="error-message">{{ form.name.errors.0 }}</div>
                     {% endif %}
                 </div>
 
                 <div class="form-group">
-                    <label for="{{ form.guardian_name.id_for_label }}">ತಂದೆ/ಗಂಡನ ಹೆಸರು <span class="required">*</span></label>
+                    <label for="{{ form.guardian_name.id_for_label }}">ತಂದೆ/ಗಂಡನ ಹೆಸರು <span
+                            class="required">*</span></label>
                     {{ form.guardian_name }}
                     {% if form.guardian_name.errors %}
-                        <div class="error-message">{{ form.guardian_name.errors.0 }}</div>
+                    <div class="error-message">{{ form.guardian_name.errors.0 }}</div>
                     {% endif %}
                 </div>
 
@@ -52,7 +66,7 @@
                         <label for="{{ form.date_of_birth.id_for_label }}">ಹುಟ್ಟಿದ ದಿನಾಂಕ</label>
                         {{ form.date_of_birth }}
                         {% if form.date_of_birth.errors %}
-                            <div class="error-message">{{ form.date_of_birth.errors.0 }}</div>
+                        <div class="error-message">{{ form.date_of_birth.errors.0 }}</div>
                         {% endif %}
                     </div>
 
@@ -60,7 +74,7 @@
                         <label for="{{ form.age.id_for_label }}">ವಯಸ್ಸು</label>
                         {{ form.age }}
                         {% if form.age.errors %}
-                            <div class="error-message">{{ form.age.errors.0 }}</div>
+                        <div class="error-message">{{ form.age.errors.0 }}</div>
                         {% endif %}
                     </div>
                 </div>
@@ -69,7 +83,7 @@
                     <label for="{{ form.profession.id_for_label }}">ವೃತ್ತಿ <span class="required">*</span></label>
                     {{ form.profession }}
                     {% if form.profession.errors %}
-                        <div class="error-message">{{ form.profession.errors.0 }}</div>
+                    <div class="error-message">{{ form.profession.errors.0 }}</div>
                     {% endif %}
                 </div>
 
@@ -77,7 +91,7 @@
                     <label for="{{ form.address.id_for_label }}">ವಿಳಾಸ <span class="required">*</span></label>
                     {{ form.address }}
                     {% if form.address.errors %}
-                        <div class="error-message">{{ form.address.errors.0 }}</div>
+                    <div class="error-message">{{ form.address.errors.0 }}</div>
                     {% endif %}
                 </div>
 
@@ -85,7 +99,7 @@
                     <label for="{{ form.mobile_no.id_for_label }}">ಮೊಬೈಲ್ ಸಂಖ್ಯೆ <span class="required">*</span></label>
                     {{ form.mobile_no }}
                     {% if form.mobile_no.errors %}
-                        <div class="error-message">{{ form.mobile_no.errors.0 }}</div>
+                    <div class="error-message">{{ form.mobile_no.errors.0 }}</div>
                     {% endif %}
                 </div>
 
@@ -93,12 +107,12 @@
                     <label for="{{ form.email.id_for_label }}">ಇ-ಮೇಲ್ ಐಡಿ <span class="required">*</span></label>
                     {{ form.email }}
                     {% if form.email.errors %}
-                        <div class="error-message">{{ form.email.errors.0 }}</div>
+                    <div class="error-message">{{ form.email.errors.0 }}</div>
                     {% endif %}
                 </div>
 
                 {% if form.non_field_errors %}
-                    <div class="error-message">{{ form.non_field_errors.0 }}</div>
+                <div class="error-message">{{ form.non_field_errors.0 }}</div>
                 {% endif %}
 
                 <div class="payment-info-section">
@@ -113,7 +127,7 @@
                             <li><strong>ಬ್ಯಾಂಕ್ ಹೆಸರು:</strong> [Bank Name]</li>
                         </ul>
                         <p class="payment-note">
-                            <strong>ಗಮನಿಸಿ:</strong> ದಯವಿಟ್ಟು ಪಾವತಿ ಮಾಡಿದ ನಂತರ, ವಹಿವಾಟು ಐಡಿ/ಯುಟಿಆರ್ ಸಂಖ್ಯೆಯನ್ನು 
+                            <strong>ಗಮನಿಸಿ:</strong> ದಯವಿಟ್ಟು ಪಾವತಿ ಮಾಡಿದ ನಂತರ, ವಹಿವಾಟು ಐಡಿ/ಯುಟಿಆರ್ ಸಂಖ್ಯೆಯನ್ನು
                             ಫಾರ್ಮ್ ಸಲ್ಲಿಸುವ ಸಂದರ್ಭದಲ್ಲಿ ನಮ್ಮ ಮೊಬೈಲ್ ಸಂಖ್ಯೆಗೆ WhatsApp ಮೂಲಕ ಕಳುಹಿಸಿ.
                         </p>
                     </div>
@@ -128,28 +142,29 @@
         <p>&copy; 2025 ಸರ್. ಎಂ.ವಿ. ಲೇಔಟ್ RWA. ಎಲ್ಲ ಹಕ್ಕುಗಳನ್ನು ಕಾಯ್ದಿರಿಸಲಾಗಿದೆ.</p>
     </footer>
 
+    <script src="{% static 'script.js' %}"></script>
     <script>
         // Auto-calculate age from date of birth
         const dobInput = document.getElementById('id_date_of_birth');
         const ageInput = document.getElementById('id_age');
 
         if (dobInput && ageInput) {
-            dobInput.addEventListener('change', function() {
+            dobInput.addEventListener('change', function () {
                 if (this.value) {
                     const dob = new Date(this.value);
                     const today = new Date();
                     let age = today.getFullYear() - dob.getFullYear();
                     const monthDiff = today.getMonth() - dob.getMonth();
-                    
+
                     if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < dob.getDate())) {
                         age--;
                     }
-                    
+
                     ageInput.value = age >= 0 ? age : '';
                 }
             });
 
-            ageInput.addEventListener('input', function() {
+            ageInput.addEventListener('input', function () {
                 if (this.value && dobInput.value) {
                     const age = parseInt(this.value);
                     const today = new Date();
@@ -160,4 +175,5 @@
         }
     </script>
 </body>
+
 </html>
